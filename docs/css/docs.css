@@ -1,0 +1,205 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Lobster);
+
+body {
+	background-color: #f9f9f9;
+}
+
+a {
+	color: #1abc9c;
+}
+a:hover, a:active {
+	color: #198b6d;
+}
+a.reference {
+	vertical-align: super;
+	font-size: 10px;
+	line-height: 10px;
+}
+a.anchor {
+	opacity: 0.3;
+	margin-left: 10px;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+	margin: 0;
+	padding: 10px 20px;
+}
+h3 {
+	font-weight: 300;
+}
+p {
+	font-size: 15px;
+	font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+	color: #666666;
+	padding: 10px 20px;
+	font-weight: 300;
+	line-height: 1.6em;
+}
+code {
+	color: #1abc9c;
+	background-color: #f6f6f6;
+	padding: 3px 6px;
+	font-size: 12px;
+}
+.template {
+	font-family: 'Lobster', 'Arial', sans-serif;
+	margin: 0 5px;
+}
+.padded {
+	padding: 0 20px;
+}
+.table th, .table td {
+	font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+	font-size: 15px;
+	line-height: 1.6em;
+}
+.table.table-bordered {
+	border-top-color: #1abc9c;
+}
+.table.table-bordered th {
+	color: #ffffff;
+	background-color: #1abc9c;
+	border-color: #1abc9c #1abc9c #149a81 #1abc9c
+}
+header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	height: 78px;
+	background-color: #1abc9c;
+}
+header .container {
+	position: relative;
+}
+header .logo, header .title {
+	color: #ffffff;
+	position: absolute;
+}
+header .logo {
+	font-size: 32px;
+	font-family: 'Lobster', 'Arial', sans-serif;
+	margin-top: 17px;
+	left: 110px;
+}
+header .logo .version {
+	font-size: 10px;
+	font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+	display: inline-block;
+	padding: 1px 6px 2px;
+	background-color: #fff;
+	color: #1abc9c;
+	margin: 0 0 5px 10px;
+	border-radius: 3px;
+}
+
+header .title {
+	right: 110px;
+	font-size: 20px;
+	font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+	font-weight: 300;
+	margin-top: 25px;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+#wrapper {
+	margin-top: 78px;
+	position: relative;
+	z-index: 3;
+	background-color: #f9f9f9;
+}
+
+aside, section {
+	margin-top: 30px;
+	background-color: #fff;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.04);
+}
+aside {
+	padding: 25px 20px 25px;
+}
+aside.affix {
+	width: 164px;
+	top: 0;
+}
+aside ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+aside li {
+	display: block;
+	margin-left: 20px;
+}
+aside li a {
+	padding: 3px 0 !important;
+}
+aside li a:hover {
+	background-color: transparent !important;
+}
+aside .title {
+	margin-top: 25px;
+	margin-left: 0;
+	margin-bottom: 4px;
+}
+aside li:first-child {
+	margin-top: 0;
+}
+aside li.active {
+	margin-left: -20px;
+	margin-right: -20px;
+}
+aside li.active a {
+	border-right: 2px solid #1abc9c;
+	font-weight: bold;
+	padding-left: 40px !important;
+	background-color: #fcfcfc;
+}
+aside .title .glyphicon {
+	font-size: 12px;
+	margin-right: 5px;
+	color: #1abc9c;
+}
+aside .divider {
+	margin: 5px 0;
+}
+
+section {
+	padding: 10px 0;
+}
+
+
+footer {
+	text-align: center;
+	padding: 20px 10px;
+	font-size: 12px;
+	font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+	color: #bbbbbb;
+}
+footer a {
+	color: #999999;
+}
+
+.changelog {
+	font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+	list-style: none;
+	padding: 0 20px;
+	font-size: 16px;
+	line-height: 1.7em;
+	font-weight: bold;
+	margin: 0;
+}
+.changelog ul {
+	list-style: none;
+	font-weight: normal;
+	font-size: 14px;
+}
+.changelog ul li:before {
+	content: "- ";
+}
+pre.prettyprint {
+	border: 0;
+	border-radius: 0;
+	padding: 20px;
+	font-size: 10px;
+}

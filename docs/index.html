@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Banshee Documentation</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	<link rel="stylesheet" href="css/tommorow-night.css">
+	<link rel="stylesheet" href="css/docs.css" />
+</head>
+<body data-spy="scroll" data-target="aside">
+	<header>
+		<div class="container">
+			<div class="logo">Banshee<span class="version">v1.0.1</span></div>
+			<div class="title">Documentation</div>
+		</div>
+	</header>
+	<div id="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2 col-xs-offset-1">
+					<aside data-spy="affix" data-offset-bottom="30" data-offset-top="78">
+						<ul class="nav">
+							<li class="title"><i class="glyphicon glyphicon-ok"></i>Preface</li>
+							<li><a class="scroll" href="#introduction">Introduction</a></li> 
+							<li class="title"><i class="glyphicon glyphicon-ok"></i>HTML &amp; CSS</li>
+							<li><a class="scroll" href="#portfolio">Portfolio</a></li>
+							<li><a class="scroll" href="#parallax">Parallax</a></li>
+							<li><a class="scroll" href="#animations">Animations</a></li>
+							<li class="title"><i class="glyphicon glyphicon-ok"></i>JavaScript</li>
+							<li><a class="scroll" href="#twitterfeed">Twitter Feed</a></li>
+							<li class="divider"><hr /></li>
+							<li><a class="scroll" href="#changelog">Changelog</a></li>
+							<li><a class="scroll" href="#credits">Credits</a></li>
+						</ul>
+					</aside>
+				</div>
+				<div class="col-xs-8">
+					<section>
+						<h1>Welcome</h1>
+						<p>
+							Hello! Welcome in the <span class="template">Banshee</span> One Page template documentation pages. Thank you for your purchase of the template. Your support for our template is very appreciated. Here you can read some words about features of the template. and how to use it properly.
+						</p>
+						<h3>Introduction<a id="introduction" class="anchor" href="#introduction">#</a></h3>
+						<p>
+							<span class="template">Banshee</span> template is a One-Page portfolio / agency template. It comes with some features that are explained below.
+						</p>
+						<hr />
+						<h3>Portfolio<a id="portfolio" class="anchor" href="#portfolio">#</a></h3>
+						<p>
+							Portfolio uses a jQuery plugin called MixItUp. This plugin allows to sort elements, filter it and show only items from filter that are selected. Portfolio also uses custom plugin for displaying portfolio item description, link and bigger image of miniature. 
+							For order to work, portfolio requires to be initialized. In&nbsp;your JS section / file add this: 
+						</p>
+						<pre class="prettyprint">Banshee.initPortfolio();</pre>
+						<h5>Default syntax of portfolio</h5> 
+						<pre class="prettyprint">&lt;ul id="portfolio-filters" class="portfolio-grid-controls"&gt;
+	    &lt;li class="filter" data-filter="all"&gt;
+	        All
+	    &lt;/li&gt;
+	    ...
+	&lt;/ul&gt;
+	&lt;div id="portfolio-items" class="portfolio-grid"&gt;
+	    &lt;div class="portfolio-item web" data-title="Natural" data-description="Lorem." data-largesrc="pat/to/img.jpg"&gt;
+	        &lt;div class="portfolio-item-inner"&gt;
+	            &lt;div class="portfolio-image"&gt;
+	                &lt;div class="portfolio-overlay"&gt;
+	                    &lt;div class="portfolio-details"&gt;
+	                        &lt;h3&gt;Natural Food&lt;/h3&gt;
+	                        &lt;h6&gt;Webdesign, Video&lt;/h6&gt;
+	                    &lt;/div&gt;
+	                &lt;/div&gt;
+	                &lt;img src="assets/img/demo/portfolio/1.jpg" alt="" /&gt;
+	            &lt;/div&gt;
+	        &lt;/div&gt;
+	    &lt;/div&gt;
+	    ...
+	&lt;/div&gt;</pre>
+						<h5>Explain</h5>
+						<div class="padded">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>Element</th>
+										<th>Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<code>&lt;ul class="portfolio-grid-controls"&gt;</code>
+										</td>
+										<td>Main element for portfolio items filters. ID can be changed, but if you change this, make sure you pass the right ID in portfolio initializer (in JS)</td>
+									</tr>
+									<tr>
+										<td>
+											<code>&lt;li class="filter"&gt;</code>
+										</td>
+										<td>Filter control element. The desired filter category of each filter button should be entered as the <code>data-filter</code> attribute. One element can be holder of one filter</td>
+									</tr>
+									<tr>
+										<td>
+											<code>&lt;div class="portfolio-grid"&gt;</code>
+										</td>
+										<td>Main container of all portfolio items. Portfolio items should be placed in this container.</td>
+									</tr>
+									<tr>
+										<td>
+											<code>&lt;div class="portfolio-item"&gt;</code>
+										</td>
+										<td>
+											It's a main container of each portfolio item. The filtering categories of each target element should be entered into its class attribute.
+											<hr />
+											Explain of data attributes for expanding portfolio details:<br />
+											<code>data-title</code> - Portfolio item title. Should be the same as title of element.<br />
+											<code>data-description</code> - Description of portfolio item. Curenttly you can use only plain text.<br />
+											<code>data-largesrc</code> - Path to bigger portfolio item image. Relative from the document.<br />
+											<code>data-link</code> - URL to anywhere. It will be placed in portfolio detals button
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<code>&lt;div clas="portfolio-details"&gt;</code>
+										</td>
+										<td>
+											Title and categories of portfolio item<br />
+											<code>h3</code> - Portfolio item title<br />
+											<code>h6</code> - Portfolio item categories (filters)
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<hr />
+						<h3>Parallax<a href="#parallax" id="parallax" class="anchor">#</a></h3>
+						<p>
+							Probably you know what parallax effect is, so I will not write about it. Focus on usage it in <span class="template">Banshee</span>.<br />
+							In order to parallax effect to be worked, you must add class <code>parallax</code> to element. This element should be a <code>section</code>, direct children of <code>div#wrapper</code> element.
+						</p>
+						<h5>Example</h5>
+						<pre class="prettyprint">&lt;section class="parallax" &gt; ... &lt;/section&gt;</pre>
+						<p>
+							To this element you must set the background via <code>style</code> attribute or via CSS. Position of background is calculated automatically.
+						</p>	
+						<p>Next is to add a one Javascript line:</p>
+						<h5>Javascript code</h5>
+						<pre class="prettyprint">$( '#some-element' ).parallax( horizontalPosition , speed , outerHeight );</pre>
+						<div class="padded">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>Element</th>
+										<th>Default</th>
+										<th>Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><code>#some-element</code></td>
+										<td>N/A</td>
+										<td>This is main parallax container that effect will be applied to.</td>
+									</tr>
+									<tr>
+										<td><code>horizontalPosition</code></td>
+										<td>50%</td>
+										<td>Horizontal position of background.</td>
+									</tr>
+									<tr>
+										<td><code>speed</code></td>
+										<td>0.1</td>
+										<td>Speed of background position change. Value should be within rnage <code>0.1 - 0.5</code> for the best effect.</td>
+									</tr>
+									<tr>
+										<td><code>outerHeight</code></td>
+										<td>true</td>
+										<td>By default, script will take a container height as outer height. Set it to false to take normal height.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<hr />
+						<h3>Animations<a href="#animatons" id="animations" class="anchor">#</a></h3>
+						<p>
+							<span class="template">Banshee</span> has a several animations that can be added to elements and it will show with animation when&nbsp;it appears on screen. It can be applied to most of html elements, such as <code>divs</code>, <code>span</code>, <code>h3</code> and others. With this, when elements will appear on screen (will be visible in viewport) it will animate with chosen animation. Currently <span class="template">Banshee</span> template has five animations and many new is planned to be added in future updates.					
+						</p>
+						<p>
+							Animatons is applied to element by adding a <code>data-animate</code> attribute to desired element with name of&nbsp;animation as value of attribute. There is also available attribute <code>data-delay</code> if you want to run animation after delay of time or turn off delay. Default delay is <code>150 * number of element</code>
+						</p>
+						<div class="padded">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>Attribute</th>
+										<th>Possible Values</th>
+										<th>Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><code>data-animate</code></td>
+										<td>
+											<code>fade-in</code><br />
+											<code>fade-in-top</code><br />
+											<code>fade-in-bottom</code><br />
+											<code>fade-in-left</code><br />
+											<code>fade-in-right</code>
+										</td>
+										<td>In this attribute you must specify the name of animation that will be triggered.</td>
+									</tr>
+									<tr>
+										<td><code>data-delay</code></td>
+										<td>
+											<code>Numeric</code>&nbsp;(1000&nbsp;is&nbsp;1sec)<br />
+											<code>none</code>
+										</td>
+										<td>This attribute is optional. Defaul value without this atrribute is <code>150 * number of element</code> in order to animate. When is set to <code>none</code> element will animate right after appears in viewport. When value is numeric, then it will be added to the default delay.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<hr />
+						<h3>Twitter Feed<a href="#twitterfeed" id="twitterfeed" class="anchor">#</a></h3>
+						<p>
+							Twitter Feed (twitterfeed.js} is used to display latest tweet from desired Twitter profile. For work Twitter Feed requires a PHP support (use a external library twitteroauth written in PHP). Usage is very simple:
+						</p>
+						<h5>Example usage</h5>
+						<pre class="prettyprint">$(document).ready(function(){
+	    $('#twitterfeed').latestTweets({
+	        twitterprofile: 'mytwitterprofile',
+	        displaylimit: 4,
+	        showavatar: true
+	    });
+	});</pre>
+						<p>
+							Here is complete list of available options:
+						</p>
+						<div class="padded">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>Option</th>
+										<th>Default</th>
+										<th>Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>displaylimit</td>
+										<td>3</td>
+										<td>Number of tweets to get</td>
+									</tr>
+									<tr>
+										<td>showavatar</td>
+										<td>false</td>
+										<td>Set true to display avatars</td>
+									</tr>
+									<tr>
+										<td>showretweets</td>
+										<td>false</td>
+										<td>Set true to show retweets from profile</td>
+									</tr>
+									<tr>
+										<td>showscreename</td>
+										<td>false</td>
+										<td>Set true to show profile screen name</td>
+									</tr>
+									<tr>
+										<td>showtwittername</td>
+										<td>false</td>
+										<td>Set true to show twitter name (name followed by @)</td>
+									</tr>
+									<tr>
+										<td>showtweetlinks</td>
+										<td>true</td>
+										<td>If set to true, links will be displayed as anchors, if false, links will be displayed as plain text</td>
+									</tr>
+									<tr>
+										<td>showretweetindicator</td>
+										<td>false</td>
+										<td>Show a retweet indicator to display tweet as retweeted</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<hr /><hr />
+						<h3>Changelog<a id="changelog" class="anchor" href="#changelog">#</a></h3>
+						<ul class="changelog">
+							<li>1.0.1 - 9/01/2014
+								<ul>
+									<li>Fixed parallax effect on Chrome browser</li>
+								</ul>
+							</li>
+							<li>1.0 - 25/12/2013
+								<ul>
+									<li>Initial release</li>
+								</ul>
+							</li>
+						</ul>
+						<hr />
+						<h3>Credits<a id="credits" class="anchor" href="#credits">#</a></h3>
+						<div class="padded">
+							<table class="table table-bordered table-striped">
+								<tbody>
+									<tr>
+										<td>Twitter Bootstrap</td>
+										<td><a target="_blank" href="http://getbootstrap.com">Link</a></td>
+										<td>Apache License</td>
+									</tr>
+									<tr>
+										<td>jQuery Framework</td>
+										<td><a target="_blank" href="http://jquery.com">Link</a></td>
+										<td>MIT License</td>
+									</tr>
+									<tr>
+										<td>BxSlider</td>
+										<td><a target="_blank" href="http://stevenwanderski.com">Link</a></td>
+										<td>MIT License</td>
+									</tr>
+									<tr>
+										<td>jQuery Appear</td>
+										<td><a target="_blank" href="https://github.com/morr/jquery.appear/">Link</a></td>
+										<td>MIT License</td>
+									</tr>
+									<tr>
+										<td>jQuery gMap</td>
+										<td><a target="_blank" href="http://github.com/marioestrada/jQuery-gMap">Link</a></td>
+										<td>MIT License</td>
+									</tr>
+									<tr>
+										<td>MaxImage</td>
+										<td><a target="_blank" href="http://www.aaronvanderzwan.com/maximage/2.0/">Link</a></td>
+										<td>MIT License &amp; GPL License</td>
+									</tr>
+									<tr>
+										<td>MixItUp</td>
+										<td><a target="_blank" href="http://mixitup.io">Link</a></td>
+										<td>Creative Commons Attribution-NoDerivs 3.0 Unported</td>
+									</tr>
+									<tr>
+										<td>jQuery One Page Nav</td>
+										<td><a target="_blank" href="http://trevordavis.net">Link</a></td>
+										<td>MIT License &amp; GPL License</td>
+									</tr>
+									<tr>
+										<td>jQuery ScrollTo</td>
+										<td><a target="_blank" href="http://flesler.blogspot.com">Link</a></td>
+										<td>MIT License</td>
+									</tr>
+									<tr>
+										<td>jQuery Cycle</td>
+										<td><a target="_blank" href="http://jquery.malsup.com/cycle/">Link</a></td>
+										<td>MIT License &amp; GPL License</td>
+									</tr>
+									<tr>
+										<td>Modernizr</td>
+										<td><a target="_blank" href="http://modernizr.com/">Link</a></td>
+										<td>MIT License &amp; BSD License</td>
+									</tr>
+									<tr>
+										<td>Portfolio Grid</td>
+										<td><a target="_blank" href="http://tympanus.net/codrops">Link</a></td>
+										<td>undefined</td>
+									</tr>
+									<tr>
+										<td>jQuery Waypoints</td>
+										<td><a target="_blank" href="https://github.com/imakewebthings/jquery-waypoints/">Link</a></td>
+										<td>MIT License &amp; GPL License</td>
+									</tr>
+									<tr>
+										<td>TwitterFeed</td>
+										<td><a target="_blank" href="www.webdevdoor.com">Link</a></td>
+										<td>undefined</td>
+									</tr>
+									<tr>
+										<td>jQuery Parallax</td>
+										<td><a href="http://www.ianlunn.co.uk/" target="_blank">Link</a></td>
+										<td>MIT License &amp; GPL License</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+					<footer>Copyright &copy; 2013 - <a href="http://bootstrap-hunter.com">Bootstrap Hunter</a> | Banshee v1.0.1 Documentation</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		!function ($) {
+		    $(function(){
+		      window.prettyPrint && prettyPrint();
+
+		      function scrollTo(hash,offset,speed) {
+					speed = (speed !== undefined ? speed : 2000);
+					offset = (offset !== undefined ? offset : 0);
+					var target_offset = $(hash).offset().top - offset;
+					$('html, body').animate({
+					    scrollTop: target_offset
+					}, speed);
+				}
+
+				$('.scroll').click(function() {
+					scrollTo($(this).attr('href'),0,400);
+				});
+
+				// parallax header
+				$(window).scroll( function() {
+					var scroll = $(window).scrollTop(), offset = scroll/2;
+					$('header').css({ transform: "translateY(-" + offset + "px)" });
+				}); 
+		    });
+		  }(window.jQuery);
+	</script>
+</body>
+</html>
